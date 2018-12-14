@@ -208,7 +208,7 @@ var vm = new Vue({
       for (var i=0; i<this.stulist.count; i++)
       {
         tabledata += "<td>";
-        tabledata += "<input type=\"button\" onclick=\"vm.remove_name(" +
+        tabledata += "<input class=\"btn btn-outline-info btn-sm\" type=\"button\" onclick=\"vm.remove_name(" +
          this.stulist.stu_list[i].stu + ")\" value=\"" +
          this.stulist.stu_list[i].stu + "\" />"
         //tabledata += this.stulist.stu_list[i].stu;
@@ -227,3 +227,20 @@ var vm = new Vue({
     this.get_paper_detail();
   }
 })
+
+
+function show()
+{
+  var login = document.getElementById('login');
+  var over = document.getElementById('over');
+  login.style.display = "block";
+  over.style.display = "block";
+}
+
+function hide()
+{
+  var login = document.getElementById('login');
+  var over = document.getElementById('over');
+  login.style.display = "none";
+  over.style.display = "none";
+}

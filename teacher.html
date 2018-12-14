@@ -33,7 +33,7 @@
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <div class="nav-profile-img">
-                <img src="images/faces/face1.jpg" alt="image">
+                <img src="images/faces-clipart/pic-1.png" alt="image">
                 <span class="availability-status online"></span>             
               </div>
               <div class="nav-profile-text">
@@ -79,7 +79,7 @@
           <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
-                <img src="images/faces/face1.jpg" alt="profile">
+                <img src="images/faces-clipart/pic-1.png" alt="profile">
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
@@ -91,17 +91,38 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" target="main_frame" href="pages/teacher/paper-list.html">
-              <span class="menu-title">试题列表</span>
+            <a class="nav-link" target="main_frame" href="pages/teacher/paper-manage.html">
+              <span class="menu-title">试卷管理</span>
               <i class="mdi mdi-buffer menu-icon"></i>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" target="main_frame" href="pages/teacher/paper-create.html" >
-              <span class="menu-title">创建试题</span>
-              <i class="mdi mdi-contacts menu-icon"></i>
+              <span class="menu-title">试题管理</span>
+              <i class="mdi mdi-format-list-numbers menu-icon"></i>
             </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" target="main_frame" href="pages/teacher/paper-judge.html" >
+              <span class="menu-title">判题系统</span>
+              <i class="mdi mdi-file-check menu-icon"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-title">试卷分析</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-comment-processing menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#">成绩汇总</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">成绩分析</a></li>
+              </ul>
+            </div>
           </li>
 
         </ul>
@@ -112,14 +133,7 @@
 
         </div> -->
         <!-- partial -->
-        <iframe width="100%" height="100%" style="border: 0" class="content-wrapper" name="main_frame" src="pages/teacher/paper-list.html"></iframe>
-        <!-- <script>
-          main_frame.document.designMode="on";
-          main_frame.document.write("从左侧框选择功能开始导航");
-          main_frame.document.body.scroll="yes";
-          main_frame.document.body.leftMargin="0";
-          main_frame.document.body.topMargin="0";
-        </script> -->
+        <iframe width="100%" height="100%" style="border: 0" class="content-wrapper" name="main_frame" src="pages/teacher/paper-manage.html"></iframe>
       </div>
       <!-- main-panel ends -->
     </div>
