@@ -90,17 +90,31 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" target="main_frame" href="pages/teacher/paper-manage.html">
+          <!-- <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#paper-managment" aria-expanded="false" aria-controls="paper-managment">
               <span class="menu-title">试卷管理</span>
+              <i class="menu-arrow"></i>
               <i class="mdi mdi-buffer menu-icon"></i>
+            </a>
+            <div class="collapse" id="paper-managment">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" target="main_frame" href="pages/teacher/paper-manage.html">试卷列表</a></li>
+                <li class="nav-item"><a class="nav-link" target="main_frame" href="pages/teacher/paper-create.html">创建试卷</a></li>
+              </ul>
+            </div>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link" target="main_frame" href="pages/teacher/paper-manage.html" >
+              <span class="menu-title">试卷列表</span>
+              <i class="mdi mdi-format-list-numbers menu-icon"></i>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" target="main_frame" href="pages/teacher/paper-create.html" >
-              <span class="menu-title">试题管理</span>
-              <i class="mdi mdi-format-list-numbers menu-icon"></i>
+              <span class="menu-title">创建试卷</span>
+              <i class="mdi mdi mdi-note-plus-outline menu-icon"></i>
             </a>
           </li>
 
@@ -112,12 +126,12 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#paper-analize" aria-expanded="false" aria-controls="paper-analize">
               <span class="menu-title">试卷分析</span>
               <i class="menu-arrow"></i>
               <i class="mdi mdi-comment-processing menu-icon"></i>
             </a>
-            <div class="collapse" id="ui-basic">
+            <div class="collapse" id="paper-analize">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="#">成绩汇总</a></li>
                 <li class="nav-item"> <a class="nav-link" href="#">成绩分析</a></li>

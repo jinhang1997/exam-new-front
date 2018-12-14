@@ -17,14 +17,15 @@
   <div class="page-header">
   <h1>创建试题</h1>
   </div>
-  <div id="app" class="card">
+  <div class="card" id="app">
     <div class="card-body">
-    <h3 class="card-title">请输入新试题的名称</h3>
-    <p><input type="text" class="form-control" name="newpaper" v-model="newpaper" placeholder="输入试题名称..."></p>
-    <input type="button" value="创建试题" class="btn btn-gradient-primary btn-fw" @click="create()" >
+      <h3 class="card-title">创建试卷</h3>
+      <p class="card-description">请输入新试卷的名称</p>
+      <p><input type="text" class="form-control" name="newpaper" v-model="newpaper" placeholder="输入试题名称..."></p>
+      <button type="button" class="btn btn-gradient-success btn-block" @click="create()"><i class="mdi mdi-library-plus"></i> 创建试卷</button> 
     </div>
   </div>
-  <script src="../../js/teacher.js"></script>
+  <script src="../../js/paper-create.js"></script>
 </body>
 
 </html>

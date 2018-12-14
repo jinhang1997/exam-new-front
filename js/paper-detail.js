@@ -204,18 +204,20 @@ var vm = new Vue({
       });
     },
     generate_stutable:function(){
-      var tabledata = "<tr>";
+      var tabledata = "<tr><td>";
+      tabledata += "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">";
       for (var i=0; i<this.stulist.count; i++)
       {
-        tabledata += "<td>";
+        //tabledata += "<td>";
         tabledata += "<input class=\"btn btn-outline-info btn-sm\" type=\"button\" onclick=\"vm.remove_name(" +
          this.stulist.stu_list[i].stu + ")\" value=\"" +
-         this.stulist.stu_list[i].stu + "\" />"
+         this.stulist.stu_list[i].stu + "\" />";
         //tabledata += this.stulist.stu_list[i].stu;
-        tabledata += "</td>";
+        //tabledata += "</td>";
         if ((i + 1) % 8 == 0)
         {
-          tabledata += "</tr><tr>";
+          tabledata += "</div></td></tr><tr><td>";
+          tabledata += "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">";
         }
       }
       tabledata += "</tr>";
@@ -229,18 +231,4 @@ var vm = new Vue({
 })
 
 
-function show()
-{
-  var login = document.getElementById('login');
-  var over = document.getElementById('over');
-  login.style.display = "block";
-  over.style.display = "block";
-}
 
-function hide()
-{
-  var login = document.getElementById('login');
-  var over = document.getElementById('over');
-  login.style.display = "none";
-  over.style.display = "none";
-}
