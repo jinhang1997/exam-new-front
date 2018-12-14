@@ -57,3 +57,23 @@ function getQueryString(name) {
   if (r != null) return unescape(r[2]); 
   return null; 
 } 
+
+/* show or hide the div over the page *
+ * which div is named `overdiv` with  *
+ * an empty div named `over`          */
+
+function show_div()
+{
+  var overdiv = document.getElementById('overdiv');
+  var over = document.getElementById('over');
+  overdiv.style.display = "block";
+  over.style.display = "block";
+}
+
+function hide_div()
+{
+  var overdiv = document.getElementById('overdiv');
+  var over = document.getElementById('over');
+  overdiv.style.display = "none";
+  over.style.display = "none";
+}
