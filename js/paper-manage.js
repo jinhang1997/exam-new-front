@@ -92,7 +92,10 @@ var vm = new Vue({
     },
     detail:function(paperid){
       // redirect to show detail
-      window.location.href = "detail.html?paperid=" + paperid;
+      window.location.href = "paper-detail.html?paperid=" + paperid;
+    },
+    problem:function(paperid){
+      window.location.href = "paper-problem.html?paperid=" + paperid;
     },
     get_test_list:function(){
       this.$http.get(backend_server + 'paper-get-list-tea/', {credentials: true})
