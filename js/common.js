@@ -77,3 +77,12 @@ function hide_div()
   overdiv.style.display = "none";
   over.style.display = "none";
 }
+
+/* scroll to the top of the current page */
+function smoothscroll(){
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+         window.requestAnimationFrame(smoothscroll);
+         window.scrollTo (0,currentScroll - (currentScroll/5));
+    }
+}
