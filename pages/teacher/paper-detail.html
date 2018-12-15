@@ -10,13 +10,19 @@
   <link rel="stylesheet" href="../../vendors/iconfonts/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="../../css/style.css">
-  <link rel="shortcut icon" href="../../images/favicon.png" />
   <link rel="stylesheet" href="../../css/overdiv.css">
+  <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
 
 <body class="content-wrapper">
-<div id="app">
+<div class="float_top">
+  <button class="btn btn-inverse-info btn-sm" onclick="javascript:smoothscroll();"><i class="mdi mdi-format-vertical-align-top"></i> 返回顶部</button>
+</div>
+<div class="float_back">
+  <button class="btn btn-inverse-warning btn-sm" onclick="javascript:history.back(-1);"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回前页</button>
+</div>
 
+<div id="app">
   <!-- 批量添加学生弹窗 -->
   <div id="overdiv" class="card">
     <div class="card-body">

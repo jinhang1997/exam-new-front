@@ -23,11 +23,21 @@ var vm = new Vue({
   methods:{
     remove:function(id_to_del){
       //console.warn(id_to_del + " is to be removed.");
-      postdata = {
-        action: 'delpro',
-        paperid: this.paper.pid,
-        problem: id_to_del
-      };
+      if (id_to_del == "all")
+      {
+        postdata = {
+          action: 'delall',
+          paperid: this.paper.pid,
+        };
+      }
+      else
+      {
+        postdata = {
+          action: 'delpro',
+          paperid: this.paper.pid,
+          problem: id_to_del
+        };
+      }
       this.$http.post(backend_server + 'paper-prolist/', postdata, {credentials: true})
       .then(function(res){
         //console.log(res.bodyText);
@@ -81,6 +91,18 @@ var vm = new Vue({
         alert('新增题目失败（2）');
         location.reload();
       });
+    },
+    reset:function(){
+      this.newpro = {
+        problem: '',
+        ptype: '',
+        point: '',
+        right: '',
+        wrong1: '',
+        wrong2: '',
+        wrong3: ''
+      };
+      console.log(this.newpro);
     },
     get_paper_detail:function(){
       this.$http.get(backend_server + 'paper-get-detail/?id=' + this.paperid, {credentials: true})
