@@ -5,11 +5,17 @@ var vm = new Vue({
     paperid: '',
     paper: '',
     anslist: '',
-    answer_content: ''
+    answer_content: '',
+    stuid_to_show: '',
+    answer_to_show: '',
   },
   methods:{
-    showans:function(stuid){
+    showans:function(stuid, answer){
       //for var in anslist
+      this.stuid_to_show = stuid;
+      this.answer_to_show = answer;
+      this.$forceUpdate();
+      show_div();
     },
     get_paper_detail:function(){
       this.$http.get(backend_server + 'paper-get-detail/?id=' + this.paperid, {credentials: true})
