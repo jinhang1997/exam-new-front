@@ -3,6 +3,7 @@ var vm = new Vue({
   el:'#app',
   data:{
     paperlist : [],
+    judge_mode: false
   },
   methods:{
     control:function(action, paperid){
@@ -65,6 +66,9 @@ var vm = new Vue({
     problem:function(paperid){
       window.location.href = "paper-problem.html?paperid=" + paperid;
     },
+    judge:function(paperid){
+      window.location.href = "paper-answers.html?paperid=" + paperid;
+    },
     get_test_list:function(){
       this.$http.get(backend_server + 'paper-get-list-tea/', {credentials: true})
       .then(function(res){
@@ -87,5 +91,10 @@ var vm = new Vue({
   },
   created:function(){
     this.get_test_list();
+    mode = getQueryString('mode');
+    if (mode == 'judge')
+    {
+      this.judge_mode = true;
+    }
   }
 })
