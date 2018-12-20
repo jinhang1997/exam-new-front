@@ -30,11 +30,10 @@
   <!-- 查看提交答案弹窗 -->
   <div id="overdiv" class="card">
     <div class="card-body">
-      <h2 class="card-title">{{ stuid_to_show }} 提交的答案</h2>
+      <h2 class="card-title">学生 {{ stuid_to_show }} 提交的答案</h2>
       <!-- <p class="card-description">请在下方文本框中一行输入一个学生学号</p> -->
       <p>
         <div style="overflow-y:scroll; height: 240px;">
-          {{answer_to_show}}
         <table class="table table-striped table-scroll">
           <thead>
             <th>题目编号</th>
@@ -42,13 +41,7 @@
             <th>题目分值</th>
             <th>学生答案</th>
           </thead>
-          <tbody>
-              <tr v-for="(ans, index) in answer_to_show.answer_list">
-                <td>ans.id</td>
-                <td>ans.type</td>
-                <td>ans.point</td>
-                <td>ans.answer</td>
-              </tr>
+          <tbody id="show_record">
           </tbody>
         </table>
         </div>
@@ -146,14 +139,14 @@
             <td>{{ ans.paperid }}</td>
             <td>{{ ans.stuid }}</td>
             <td>{{ ans.submit_time }}</td>
-            <td v-if="ans.keguan_grade == -1">未判题</td>
+            <td v-if="ans.keguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
             <td v-if="ans.keguan_grade != -1">{{ ans.keguan_grade }}</td>
-            <td v-if="ans.zhuguan_grade == -1">未判题</td>
+            <td v-if="ans.zhuguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
             <td v-if="ans.zhuguan_grade != -1">{{ ans.zhuguan_grade }}</td>
             <td>{{ (ans.keguan_grade == -1 ? 0 : ans.keguan_grade) + (ans.zhuguan_grade == -1 ? 0 : ans.zhuguan_grade) }}
             </td>
-            <td><input type="button" @click="showans(ans.stuid, ans.answers)" value="点击查看"></td>
-            <td><input type="button" value="删除"></td>
+            <td><button type="button" class="btn btn-gradient-info btn-sm" @click="showans(ans.stuid, ans.answers)"><i class="mdi mdi-information-outline"></i> 查看记录</button></td>
+            <td><button type="button" class="btn btn-gradient-danger btn-sm" @click="delans(ans.stuid)"><i class="mdi mdi-delete"></i> 删除记录</button></td>
           </tr>
         </tbody>
       </table>
