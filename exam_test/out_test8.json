@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "声音与视频信息在计算机内的表现形式是（）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "二进制数字",
+            "wrong1": "调制",
+            "wrong2": "模拟",
+            "wrong3": "模拟或数字"
+        },
+        {
+            "id": 2,
+            "problem": "<div>  下列叙述正确的是（ ）。 </div>",
+            "type": "keguan",
+            "point": 4,
+            "right": "不同指令的指令周期包含的机器周期数可能不同",
+            "wrong1": "可用字段译码法表示的微命令必须是相容的",
+            "wrong2": "指令周期等价于微指令周期",
+            "wrong3": "节拍脉冲等价于CPU周期"
+        },
+        {
+            "id": 3,
+            "problem": "个域网：用户在基于家庭环境的背景下使用的网络。",
+            "type": "keguan",
+            "point": 4,
+            "right": "错误",
+            "wrong1": "正确",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 4,
+            "problem": "在云计算平台中，（）软件即服务。",
+            "type": "keguan",
+            "point": 4,
+            "right": "SaaS",
+            "wrong1": "PaaS",
+            "wrong2": "IaaS",
+            "wrong3": "QaaS"
+        },
+        {
+            "id": 5,
+            "problem": "计算机在内存中存储数据时使用了大、小端模式，请分别写出A=0X123456在不同情况下的首字节是?大端模式?小端模式? x86结构的计算机使用 （）模式。",
+            "type": "keguan",
+            "point": 4,
+            "right": "0X12 0X56 小端",
+            "wrong1": "0X56 0X12 大端",
+            "wrong2": "0X56 0X12 小端",
+            "wrong3": "0X12 0X56 大端"
+        },
+        {
+            "id": 6,
+            "problem": "假设磁盘上的物理块大小为512字节，一个逻辑记录长度为80个字符。若采用记录成组技术存储若干记录，当块因子为4时，磁盘空间的利用率可达到( )。",
+            "type": "keguan",
+            "point": 4,
+            "right": "63%",
+            "wrong1": "33%",
+            "wrong2": "16%",
+            "wrong3": "91%"
+        },
+        {
+            "id": 7,
+            "problem": "2008 年，（ ）先后在无锡和北京建立了两个云计算中心。",
+            "type": "keguan",
+            "point": 4,
+            "right": "IBM",
+            "wrong1": "谷歌",
+            "wrong2": "亚马孙",
+            "wrong3": "微软"
+        },
+        {
+            "id": 8,
+            "problem": "某指令流水线由5段组成，各段所需要的时间依次如下：\nt、3t、t、2t、t ，\n如果连续执行10条指令，则吞吐率为?",
+            "type": "keguan",
+            "point": 4,
+            "right": "0.2857/t",
+            "wrong1": "0.2041/t",
+            "wrong2": "0.1428/t",
+            "wrong3": "0.3333/t"
+        },
+        {
+            "id": 9,
+            "problem": "用DEBUG调试汇编语言程序时，显示某指令的地址是2F80：F400，此时段寄存器CS的值是（ ）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "2F80H",
+            "wrong1": "F400H",
+            "wrong2": "F4000H",
+            "wrong3": "2F800H"
+        },
+        {
+            "id": 10,
+            "problem": "物联网跟人的神经网络相似，通过各种信息传感设备，把物品与互联网连接起来，进行信息交换和通讯，下面哪些是物联网的信息传感设备：（ ）",
+            "type": "keguan",
+            "point": 4,
+            "right": "激光扫描器",
+            "wrong1": "射频识别（RFID）芯片",
+            "wrong2": "红外感应器",
+            "wrong3": "全球定位系统"
+        }
+    ]
+}

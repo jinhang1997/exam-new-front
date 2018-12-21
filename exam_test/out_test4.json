@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "负载因子(装填因子)是哈希表的一个重要参数,它反映哈希表的装满程度()",
+            "type": "keguan",
+            "point": 4,
+            "right": "对",
+            "wrong1": "错",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 2,
+            "problem": "为提高散列（ Hash ）表的查找效率，可以采取的正确措施是 。",
+            "type": "keguan",
+            "point": 4,
+            "right": "仅Ⅱ、Ⅲ",
+            "wrong1": "仅Ⅱ",
+            "wrong2": "仅Ⅰ、Ⅱ",
+            "wrong3": "仅Ⅰ"
+        },
+        {
+            "id": 3,
+            "problem": "在哈希表中勿需任何比较就可找到记录在表中的位置，这种说法（）",
+            "type": "keguan",
+            "point": 4,
+            "right": "错误",
+            "wrong1": "正确",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 4,
+            "problem": "用哈希（散列）方法处理冲突（碰撞）时可能出现堆积（聚集）现象，下列选项中，会受堆积现象直接影响的是 （）",
+            "type": "keguan",
+            "point": 4,
+            "right": "平均查找长度",
+            "wrong1": "数列函数",
+            "wrong2": "装填（装载）因子",
+            "wrong3": "存储效率"
+        },
+        {
+            "id": 5,
+            "problem": "假定有k个关键字互为同义词,若用线性探测法把这k个关键字存入哈希表中,至少要进行多少次探测?()",
+            "type": "keguan",
+            "point": 4,
+            "right": "k(k-1)/2次",
+            "wrong1": "k次",
+            "wrong2": "k+1次",
+            "wrong3": "k-1次"
+        },
+        {
+            "id": 6,
+            "problem": "下列不属于hash碰撞解决方法的是（）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "单旋转法",
+            "wrong1": "线性探测",
+            "wrong2": "二次探测",
+            "wrong3": "拉链法"
+        },
+        {
+            "id": 7,
+            "problem": "<span>散列法存储的思想是由关键字值决定数据的存储地址，这样的说法正确吗？</span>",
+            "type": "keguan",
+            "point": 4,
+            "right": "正确",
+            "wrong1": "不正确",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 8,
+            "problem": "设哈希表长为14，哈希函数为h(key)=key%11。表中现有数据15、38、61和84，其余位置为空，如果用二次探测再散列处理冲突，则49的位置是\n​",
+            "type": "keguan",
+            "point": 4,
+            "right": "9",
+            "wrong1": "3",
+            "wrong2": "5",
+            "wrong3": "8"
+        },
+        {
+            "id": 9,
+            "problem": "比较B+Tree/Hash_Map/STL Map三种数据结构。",
+            "type": "keguan",
+            "point": 4,
+            "right": "Hash_Map/B+Tree",
+            "wrong1": "STL_Map/B+Tree",
+            "wrong2": "STL_Map/Hash_Map",
+            "wrong3": "B+Tree/Hash_Map"
+        },
+        {
+            "id": 10,
+            "problem": "解决hash冲突的方法描述错误的有？",
+            "type": "keguan",
+            "point": 4,
+            "right": "当结点规模较大时，开放定址法较为节省空间",
+            "wrong1": "拉链法解决冲突的做法是：将所有关键字为同义词的结点链接在同一个单链表中",
+            "wrong2": "拉链法处理冲突简单，且无堆积现象，即非同义词决不会发生冲突，因此平均查找长度较短",
+            "wrong3": "开放定址法解决冲突的做法是：当冲突发生时，使用某种探查(亦称探测)技术在散列表中形成一个探查(测)序列。沿此序列逐个单元地查找，直到找到给定 的关键字，或者碰到一个开放的地址(即该地址单元为空)为止。"
+        }
+    ]
+}

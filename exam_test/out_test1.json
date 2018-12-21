@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "关于网桥的描述中，正确的是 （）",
+            "type": "keguan",
+            "point": 4,
+            "right": "网桥是在数据链路层实现网络互联的设备",
+            "wrong1": "网桥互联的网络在网络层都采用不同协议",
+            "wrong2": "网桥无法实现地址过滤与帧转发功能",
+            "wrong3": "透明网桥由源结点实现帧的路由选择功能"
+        },
+        {
+            "id": 2,
+            "problem": "对于基带 CSMA/CD 而言，为了确保发送站点在传输时能检测到可能存在的冲突，数据帧的传输时延至少要等于信号传播时延的 (   )。",
+            "type": "keguan",
+            "point": 4,
+            "right": "2倍",
+            "wrong1": "1倍",
+            "wrong2": "4倍",
+            "wrong3": "2.5倍"
+        },
+        {
+            "id": 3,
+            "problem": "What the message in NetworkLayer is called? ( )",
+            "type": "keguan",
+            "point": 4,
+            "right": "datagram",
+            "wrong1": "algorithms",
+            "wrong2": "segment",
+            "wrong3": "message"
+        },
+        {
+            "id": 4,
+            "problem": "下列关于交换机的叙述中，正确的是 （） 。",
+            "type": "keguan",
+            "point": 4,
+            "right": "以太网交换机本质上是一种多端口网桥",
+            "wrong1": "通过交换机互连的一组工作站构成一个冲突域",
+            "wrong2": "交换机每个端口所连网络构成一个独立的广播域",
+            "wrong3": "以太网交换机可实现采用不同网络层协议的网络互联"
+        },
+        {
+            "id": 5,
+            "problem": "双绞线传输介质是把两根导线绞在一起，这样可以减少（）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "信号之间的相互串扰",
+            "wrong1": "外界信号的干扰",
+            "wrong2": "信号向外泄露",
+            "wrong3": "信号传输时的衰减"
+        },
+        {
+            "id": 6,
+            "problem": "一A类网络的子网号subnet-id分别为16个1，那么他的子网掩码是多少？（ ）",
+            "type": "keguan",
+            "point": 4,
+            "right": "255.255.255.0",
+            "wrong1": "255.255.248.255",
+            "wrong2": "255.255.248.0",
+            "wrong3": "255.255.255.248"
+        },
+        {
+            "id": 7,
+            "problem": "关于因特网中路由器和广域网中结点交换机叙述错误的是&nbsp;（） 。&lt;br&gt;\n&lt;br&gt;",
+            "type": "keguan",
+            "point": 4,
+            "right": "路由器和结点交换机都使用统一的IP协议。",
+            "wrong1": "路由器专门用来转发分组，结点交换机还可以连接上许多主机。",
+            "wrong2": "路由器用来互连不同的网络，结点交换机只是在一个特定的网络中工作。",
+            "wrong3": "路由器根据目的网络地址找出下一跳（即下一个路由器），而结点交换机则根据目的站所接入的交换机号找出下一跳（即下一个结点交换机）。"
+        },
+        {
+            "id": 8,
+            "problem": "发送窗口大小是多少？（ ）",
+            "type": "keguan",
+            "point": 4,
+            "right": "不超过2^n-1",
+            "wrong1": "不超过2^n",
+            "wrong2": "2^n",
+            "wrong3": "2^n-1"
+        },
+        {
+            "id": 9,
+            "problem": "采用海明码纠正一位差错，若信息位为 4 位，则冗余位至少应为 (   )",
+            "type": "keguan",
+            "point": 4,
+            "right": "3位",
+            "wrong1": "2位",
+            "wrong2": "5位",
+            "wrong3": "4位"
+        },
+        {
+            "id": 10,
+            "problem": "下列（   ）设备或者软件属于核心系统",
+            "type": "keguan",
+            "point": 4,
+            "right": "路由器",
+            "wrong1": "Web服务器",
+            "wrong2": "联网的智能手机",
+            "wrong3": "个人笔记本"
+        }
+    ]
+}

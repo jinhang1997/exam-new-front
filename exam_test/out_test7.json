@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "在以下不同的场景中,使用的分析方法不正确的有",
+            "type": "keguan",
+            "point": 4,
+            "right": "根据商家近几年的成交数据,用聚类算法拟合出用户未来一个月可能的消费金额公式",
+            "wrong1": "根据商家最近一年的经营及服务数据,用聚类算法判断出天猫商家在各自主营类目下所属的商\n  家层级",
+            "wrong2": "用关联规则算法分析出购买了汽车坐垫的买家,是否适合推荐汽车脚垫",
+            "wrong3": "根据用户最近购买的商品信息,用决策树算法识别出淘宝买家可能是男还是女"
+        },
+        {
+            "id": 2,
+            "problem": "下面数据结构能够支持随机的插入和删除操作、并具有较好的性能的是",
+            "type": "keguan",
+            "point": 4,
+            "right": "链表和哈希表",
+            "wrong1": "数组和链表",
+            "wrong2": "哈希表和队列",
+            "wrong3": "堆栈和双向队列"
+        },
+        {
+            "id": 3,
+            "problem": "如果某系统12*5=61成立，则系统采用的是()进制",
+            "type": "keguan",
+            "point": 4,
+            "right": "9",
+            "wrong1": "8",
+            "wrong2": "7",
+            "wrong3": "10"
+        },
+        {
+            "id": 4,
+            "problem": "对于以下代码，\n\n\n\tchar* p=new char[100];\n\n\n\t...",
+            "type": "keguan",
+            "point": 4,
+            "right": "p在栈上，new出来的在堆上",
+            "wrong1": "p和new出来的内存都在堆上",
+            "wrong2": "p在堆上，new出来的在栈上",
+            "wrong3": "p和new出来的内存都在栈上"
+        },
+        {
+            "id": 5,
+            "problem": "以下表的设计，最合理的是",
+            "type": "keguan",
+            "point": 4,
+            "right": "学生{id,name,age} ,学科{id,name} 分数{学生 id,学科 id,分数}",
+            "wrong1": "学生{id,name,age} ,分数{学生 id, 学科id, 学科 name , 分数}",
+            "wrong2": "分数{学生id, 学生 name，学生age, 学科id，学科名称, 分数, }",
+            "wrong3": "学科{id,name},分数{学生id，学生姓名，学生age，学科 id,分数}"
+        },
+        {
+            "id": 6,
+            "problem": "若用&phi;（ｎ）表示欧拉函数，请问：&phi;（５６）的欧拉函数之积为？",
+            "type": "keguan",
+            "point": 4,
+            "right": "２４",
+            "wrong1": "１０",
+            "wrong2": "１５",
+            "wrong3": "１１"
+        },
+        {
+            "id": 7,
+            "problem": "下面数据结构能够支持随机的插入和删除操作、并具有较好的性能的是",
+            "type": "keguan",
+            "point": 4,
+            "right": "链表和哈希表",
+            "wrong1": "数组和链表",
+            "wrong2": "哈希表和队列",
+            "wrong3": "堆栈和双向队列"
+        },
+        {
+            "id": 8,
+            "problem": "在一次大选中候选人A和B进行竞选。候选人A的抽样支持率为60%，95%的置...",
+            "type": "keguan",
+            "point": 4,
+            "right": "2.5%",
+            "wrong1": "60%",
+            "wrong2": "5%",
+            "wrong3": "40%"
+        },
+        {
+            "id": 9,
+            "problem": "字符串\"//＾▽＾//\\n\"的长度是",
+            "type": "keguan",
+            "point": 4,
+            "right": "8",
+            "wrong1": "7",
+            "wrong2": "6",
+            "wrong3": "9"
+        },
+        {
+            "id": 10,
+            "problem": "一个查询语句执行后显示的结果为\n\n\n\t\n\t\t1班 80&nbsp;\n\t\n\t...",
+            "type": "keguan",
+            "point": 4,
+            "right": "SELECT AVG(成绩) FROM 成绩表 WHERE class&amp;lt;=3 GROUP BY class",
+            "wrong1": "SELECT AVG(成绩) FROM 成绩表 WHERE class&amp;lt;=3",
+            "wrong2": "SELECT AVG(成绩) FROM 成绩表 WHERE class&amp;lt;=3 order by class",
+            "wrong3": "SELECT AVG(成绩) FROM 成绩表 HAVING class &amp;lt;=3 GROUP BY class"
+        }
+    ]
+}

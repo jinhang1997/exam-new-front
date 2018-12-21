@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "下面属于白盒测试方法的是?",
+            "type": "keguan",
+            "point": 4,
+            "right": "逻辑覆盖",
+            "wrong1": "等价划分方法",
+            "wrong2": "边界值分析",
+            "wrong3": "错误推测法"
+        },
+        {
+            "id": 2,
+            "problem": "如果我们可以通过覆盖率检测来判断我们是否对所有的路径都进行了测试，但是仍然可能存在未被检测出来的缺陷，原因是（）",
+            "type": "keguan",
+            "point": 4,
+            "right": "全部选项",
+            "wrong1": "程序可能因为缺某些路径而存在问题",
+            "wrong2": "穷举路径的测试可能不好暴露数据敏感的错误",
+            "wrong3": "就算穷举路径测试也不能保证程序符合需求"
+        },
+        {
+            "id": 3,
+            "problem": "测试人员要坚持原则，缺陷未修复完坚决不予通过。请判断这句话的正确与否。",
+            "type": "keguan",
+            "point": 4,
+            "right": "F",
+            "wrong1": "T",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 4,
+            "problem": "下面不属于软件测试步骤的是?",
+            "type": "keguan",
+            "point": 4,
+            "right": "回归测试",
+            "wrong1": "集成测试",
+            "wrong2": "确认测试",
+            "wrong3": "单元测试"
+        },
+        {
+            "id": 5,
+            "problem": "假设我们每天80%的访问集中在20%的时间里（峰值），如果每天有300万的pv，而 我们的单台机器的QPS为58，那么大概需要几台这样的机器：",
+            "type": "keguan",
+            "point": 4,
+            "right": "3台",
+            "wrong1": "4台",
+            "wrong2": "5台",
+            "wrong3": "6台"
+        },
+        {
+            "id": 6,
+            "problem": "这种情况下最好采用",
+            "type": "keguan",
+            "point": 4,
+            "right": "因果图",
+            "wrong1": "等价类划分",
+            "wrong2": "边界值分析",
+            "wrong3": "错误推测法"
+        },
+        {
+            "id": 7,
+            "problem": "软件验收测试包括哪些？",
+            "type": "keguan",
+            "point": 4,
+            "right": "beta测试",
+            "wrong1": "白盒测试",
+            "wrong2": "正式验收测试",
+            "wrong3": "alpha测试"
+        },
+        {
+            "id": 8,
+            "problem": "loadrunner包括以下哪几个部分？",
+            "type": "keguan",
+            "point": 4,
+            "right": "结果分析工具",
+            "wrong1": "需求分析工具",
+            "wrong2": "脚本编辑工具",
+            "wrong3": "测试执行工具"
+        },
+        {
+            "id": 9,
+            "problem": "软件测试计划评审会需要哪些人员参加？",
+            "type": "keguan",
+            "point": 4,
+            "right": "测试组",
+            "wrong1": "项目经理",
+            "wrong2": "SQA 负责人",
+            "wrong3": "配置负责人"
+        },
+        {
+            "id": 10,
+            "problem": "下面描述测试工具的功能正确的有？",
+            "type": "keguan",
+            "point": 4,
+            "right": "TestLink: 用例管理工具",
+            "wrong1": "JMeter: 基于JAVA的压力测试工具，Badboy用来进行脚本的录制",
+            "wrong2": "Junit: 白盒测试工具：针对代码测试",
+            "wrong3": "LoadRunner:负载压力测试"
+        }
+    ]
+}

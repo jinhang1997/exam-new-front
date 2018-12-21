@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "下列语句是真命题的有（ ）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "2是素数.",
+            "wrong1": "x+5 &gt; 6.",
+            "wrong2": "地球外的星球上也有人.",
+            "wrong3": "这朵花多好看呀！"
+        },
+        {
+            "id": 2,
+            "problem": "甲从1楼爬到3楼共用了6分钟，乙爬每层楼比甲快1分钟，则乙从2楼爬到8楼要多长时间？",
+            "type": "keguan",
+            "point": 4,
+            "right": "12分钟",
+            "wrong1": "7分钟",
+            "wrong2": "6分钟",
+            "wrong3": "14分钟"
+        },
+        {
+            "id": 3,
+            "problem": "某海鲜档口出售一批总共150斤的鲜鱼，按原售价每卖出一斤可赚5元。由于较为畅销，在卖出三分之一后，档主将售价上调20%。卖完所有鲜鱼后，档主一共赚了1250元，则原售价是每斤（）元。",
+            "type": "keguan",
+            "point": 4,
+            "right": "25",
+            "wrong1": "20",
+            "wrong2": "30",
+            "wrong3": "35"
+        },
+        {
+            "id": 4,
+            "problem": "老王去年种了一块菜地，今年他又新开发出了一块比去年大的正方形菜地，这块新地的卷心",
+            "type": "keguan",
+            "point": 4,
+            "right": "11235",
+            "wrong1": "9874",
+            "wrong2": "7934",
+            "wrong3": "8216"
+        },
+        {
+            "id": 5,
+            "problem": "一本书的价格低了50%。现在，如果按原价出售，提高了百分之几？",
+            "type": "keguan",
+            "point": 4,
+            "right": "100%",
+            "wrong1": "50%",
+            "wrong2": "75%",
+            "wrong3": "25%"
+        },
+        {
+            "id": 6,
+            "problem": "一个包里有5个黑球，10个红球和17个白球。每次可以从中取两个球出来，放置在外面。那么至少取________次以后，一定出现过取出一对颜色一样的球。",
+            "type": "keguan",
+            "point": 4,
+            "right": "16",
+            "wrong1": "9",
+            "wrong2": "4",
+            "wrong3": "1"
+        },
+        {
+            "id": 7,
+            "problem": "How many rectangles you can find from 3*4 grid?",
+            "type": "keguan",
+            "point": 4,
+            "right": "60",
+            "wrong1": "20",
+            "wrong2": "40",
+            "wrong3": "18"
+        },
+        {
+            "id": 8,
+            "problem": "在（ ）中，补元是唯一的。",
+            "type": "keguan",
+            "point": 4,
+            "right": "有补分配格",
+            "wrong1": "有补格",
+            "wrong2": "分配格",
+            "wrong3": "有界格"
+        },
+        {
+            "id": 9,
+            "problem": "书架上有编号为1-19的19本书，从中拿5本，问5本编号都不相邻的拿法有多少种？",
+            "type": "keguan",
+            "point": 4,
+            "right": "3003",
+            "wrong1": "2002",
+            "wrong2": "11628",
+            "wrong3": "12589"
+        },
+        {
+            "id": 10,
+            "problem": "集合A到B共有64个不同的函数，则B中元素不可能有（  ）个。",
+            "type": "keguan",
+            "point": 4,
+            "right": "16",
+            "wrong1": "8",
+            "wrong2": "4",
+            "wrong3": "64"
+        }
+    ]
+}
