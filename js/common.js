@@ -1,6 +1,4 @@
 
-document.write("<script language=javascript src='backend.js'></script>");
-
 window.onload = function(){
   var verify = new Vue({
     el:'#verify',
@@ -10,7 +8,7 @@ window.onload = function(){
     methods:{
       logout:function(){
         //发送 post 请求
-        this.$http.get('http://localhost:8000/logout/', {credentials: true}).then(function(res){
+        this.$http.get(backend_server + 'logout/', {credentials: true}).then(function(res){
           //document.write(res.bodyText);  
           console.log(res.bodyText);
           var dataret = JSON.parse(res.bodyText);
@@ -32,7 +30,7 @@ window.onload = function(){
       }
     },
     created:function(){
-      this.$http.get('http://localhost:8000/login/', {credentials: true}).then(function(res){
+      this.$http.get(backend_server + 'login/', {credentials: true}).then(function(res){
         console.log(res.bodyText);
         var dataret = JSON.parse(res.bodyText);
         if (dataret.code == 200)

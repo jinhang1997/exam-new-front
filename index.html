@@ -11,6 +11,7 @@
   <script src="js/vue.min.js"></script>
   <script src="js/vue-resource.min.js"></script>
   <script src="js/common.js"></script>
+  <script src="backend.js"></script>
   <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
@@ -45,7 +46,7 @@
                   <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" href="javascript:void(0)" @click="trylogin()">登录</a>
                 </div>
                 <div class="mt-3">
-                  <p style="text-align: center;"><a href="http://localhost:8000/admin/" class="auth-link text-black">后台管理</a></p>
+                  <p style="text-align: center;"><a @click="admin()" class="auth-link text-black">后台管理</a></p>
                 </div>
               </form>
             </div>
@@ -96,6 +97,9 @@
           },function(res){
             console.log(res.status);
           });
+        },
+        admin:function(){
+          window.open(backend_server + "admin/");
         }
       }
     })
