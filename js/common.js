@@ -1,4 +1,6 @@
 
+document.write("<script language=javascript src='backend.js'></script>");
+
 window.onload = function(){
   var verify = new Vue({
     el:'#verify',
@@ -49,7 +51,7 @@ window.onload = function(){
   })
 }
 
-var backend_server = 'http://localhost:8000/'
+//var backend_server = 'http://localhost:8000/'
 
 function getQueryString(name) { 
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
