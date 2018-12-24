@@ -1,3 +1,3 @@
 
-var backend_server = 'http://data.jinhangdev.cn:8000/'
+var backend_server = 'http://localhost:8000/'
 
