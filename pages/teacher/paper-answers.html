@@ -102,7 +102,7 @@
                 <td>清除当前所有客观题判定结果</td>
               </tr>
               <tr>
-                <td><button class="btn btn-gradient-danger btn-block"> 清除主观题判定</button></td>
+                <td><button class="btn btn-gradient-danger btn-block" @click="clean_zhuguan()"> 清除主观题判定</button></td>
                 <td>清除当前所有主观题判定结果（<label class="badge bg-warning">该操作不可逆，请谨慎操作</label>）</td>
               </tr>
               <tr>
@@ -123,16 +123,18 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">提交列表</h2>
-      <p class="card-description">本试卷所有已提交答案的学生列表</p>
+      <p class="card-description">本试卷所有已提交答案的学生列表；修改主观题判定可直接进入“判主观题”后重新提交</p>
       <table class="table">
         <thead>
           <th>试卷编号</th>
           <th>学生姓名</th>
           <th>提交时间</th>
+          <th>是否提交</th>
           <th>客观题得分</th>
           <th>主观题得分</th>
           <th>当前总分</th>
           <th>答案内容</th>
+          <th>判主观题</th>
           <th>记录操作</th>
         </thead>
         <tbody>
@@ -140,6 +142,8 @@
             <td>{{ ans.paperid }}</td>
             <td>{{ ans.stuid }}</td>
             <td>{{ ans.submit_time }}</td>
+            <td v-if="ans.confirmed == 'no'">未提交</td>
+            <td v-if="ans.confirmed == 'yes'">已提交</td>
             <td v-if="ans.keguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
             <td v-if="ans.keguan_grade != -1">{{ ans.keguan_grade }}</td>
             <td v-if="ans.zhuguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
@@ -147,6 +151,7 @@
             <td>{{ (ans.keguan_grade == -1 ? 0 : ans.keguan_grade) + (ans.zhuguan_grade == -1 ? 0 : ans.zhuguan_grade) }}
             </td>
             <td><button type="button" class="btn btn-gradient-info btn-sm" @click="showans(ans.stuid, ans.answers)"><i class="mdi mdi-information-outline"></i> 查看记录</button></td>
+            <td><button type="button" class="btn btn-gradient-light btn-sm" @click="judge_zhuguan(ans.stuid, paper.pid)"><i class="mdi mdi-comment-check-outline"></i> 判主观题</button></td>
             <td><button type="button" class="btn btn-gradient-danger btn-sm" @click="delans(ans.stuid)"><i class="mdi mdi-delete"></i> 删除记录</button></td>
           </tr>
         </tbody>

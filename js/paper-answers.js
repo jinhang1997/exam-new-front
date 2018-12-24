@@ -109,7 +109,7 @@ var vm = new Vue({
         action: 'judge_keguan',
         paperid: this.paperid
       };
-      this.$http.post(backend_server + 'judge-cmd/', postdata, {credentials: true})
+      this.$http.post(backend_server + 'judge-keguan/', postdata, {credentials: true})
       .then(function(res){
         console.log(res.bodyText);
         var dataret = JSON.parse(res.bodyText);
@@ -128,12 +128,12 @@ var vm = new Vue({
       });
     },
     clean_keguan:function(){
-      // TODO: Send command to backend and refresh
+      // Send command to backend and refresh
       postdata = {
         action: 'clean_keguan',
         paperid: this.paperid
       };
-      this.$http.post(backend_server + 'judge-cmd/', postdata, {credentials: true})
+      this.$http.post(backend_server + 'judge-keguan/', postdata, {credentials: true})
       .then(function(res){
         console.log(res.bodyText);
         var dataret = JSON.parse(res.bodyText);
@@ -151,6 +151,32 @@ var vm = new Vue({
         alert('客观题判定结果清除失败(2)');
       });
     },
+    judge_zhuguan:function(stuid, paperid){
+      window.location.href = 'judge-zhuguan.html?paperid=' + paperid + '&stuid=' + stuid;
+    },
+    clean_zhuguan:function(){
+      postdata = {
+        action: 'clean_zhuguan',
+        paperid: this.paperid
+      };
+      this.$http.post(backend_server + 'judge-zhuguan/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          alert('主观题判定结果清除成功');
+          location.reload();
+        }
+        else
+        {
+          alert('主观题判定结果清除失败(1)');
+        }
+      },function(res){
+        console.log(res.status);
+        alert('主观题判定结果清除失败(2)');
+      });
+    }
   },
   created:function(){
     this.paperid = getQueryString('paperid');
