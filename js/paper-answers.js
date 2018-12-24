@@ -50,15 +50,17 @@ var vm = new Vue({
         var dataret = JSON.parse(res.bodyText);
         if (dataret.code == 200)
         {
-          this.anslist = dataret.anslist;
+          alert('删除成功');
+          location.reload();
         }
         else
         {
-          this.prolist = '删除学生提交记录失败(1)';
+          alert('删除学生提交记录失败(1)');
+          location.reload();
         }
       },function(res){
         console.log(res.status);
-        this.prolist = '删除学生提交记录失败(2)';
+        alert('删除学生提交记录失败(2)');
       });
     },
     get_paper_detail:function(){
@@ -100,7 +102,55 @@ var vm = new Vue({
         console.log(res.status);
         this.prolist = '获取试题列表失败(2)';
       });
-    }
+    },
+    judge_keguan:function(){
+      // TODO: Send command to backend and refresh
+      postdata = {
+        action: 'judge_keguan',
+        paperid: this.paperid
+      };
+      this.$http.post(backend_server + 'judge-cmd/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          alert('客观题判定成功');
+          location.reload();
+        }
+        else
+        {
+          alert('自动判定客观题失败(1)');
+        }
+      },function(res){
+        console.log(res.status);
+        alert('自动判定客观题失败(2)');
+      });
+    },
+    clean_keguan:function(){
+      // TODO: Send command to backend and refresh
+      postdata = {
+        action: 'clean_keguan',
+        paperid: this.paperid
+      };
+      this.$http.post(backend_server + 'judge-cmd/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          alert('客观题判定结果清除成功');
+          location.reload();
+        }
+        else
+        {
+          alert('客观题判定结果清除失败(1)');
+        }
+      },function(res){
+        console.log(res.status);
+        alert('客观题判定结果清除失败(2)');
+      });
+    },
   },
   created:function(){
     this.paperid = getQueryString('paperid');

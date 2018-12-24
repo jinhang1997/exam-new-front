@@ -90,7 +90,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><button class="btn btn-gradient-success btn-block"> 自动判定客观题</button></td>
+                <td><button class="btn btn-gradient-success btn-block" @click="judge_keguan()"> 自动判定客观题</button></td>
                 <td>由判题系统自动对当前所有提交的答案中客观题部分进行判定</td>
               </tr>
               <tr>
@@ -98,7 +98,7 @@
                 <td>从提交列表中自动选择未判主观题的提交继续判题</td>
               </tr>
               <tr>
-                <td><button class="btn btn-gradient-warning btn-block"> 清除客观题判定</button></td>
+                <td><button class="btn btn-gradient-warning btn-block" @click="clean_keguan()"> 清除客观题判定</button></td>
                 <td>清除当前所有客观题判定结果</td>
               </tr>
               <tr>

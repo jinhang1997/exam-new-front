@@ -63,6 +63,9 @@ var vm = new Vue({
       // NOT confirmed to implement this one
     },
     insert:function(){
+      // Bug fix: Reload point field to integer
+      this.newpro.point = parseInt(this.newpro.point);
+      //
       postdata = {
         action: 'addpro',
         paperid: this.paper.pid,
@@ -97,7 +100,7 @@ var vm = new Vue({
         problem: '',
         ptype: '',
         point: '',
-        right: '',
+        right: 0,
         wrong1: '',
         wrong2: '',
         wrong3: ''
