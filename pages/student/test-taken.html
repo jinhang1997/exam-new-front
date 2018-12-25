@@ -22,37 +22,31 @@
 
 <div id="app">
   <div class="page-header">
-    <h1>考试列表</h1>
+    <h1>考试记录</h1>
   </div>
 
   <div class="card">
     <div class="card-body">
-      <h3 class="card-title">考试列表</h3>
-      <p class="card-description">已开放答题的试卷，可点击“进入答题”进入</p>
+      <h3 class="card-title">考试记录</h3>
+      <p class="card-description">下面是您已参加过的考试</p>
       <table class="table table-hover">
           <thead>
             <th>试题编号</th>
             <th>试题名称</th>
             <th>出题老师</th>
-            <th>题目数量</th>
-            <th>准考人数</th>
-            <th>是否开放</th>
-            <th>进入考试</th>
+            <th>交卷时间</th>
+            <th>成绩状态</th>
+            <th>最终成绩</th>
           </thead>
           <tbody>
-            <tr v-for ="(paper, index) in testlist">
+            <tr v-for ="(paper, index) in takenlist">
               <td>{{ paper.pid }}</td>
               <td>{{ paper.pname }}</td>
               <td>{{ paper.teaname }}</td>
-              <td>{{ paper.prolist }}</td>
-              <td>{{ paper.stulist }}</td>
-              <td v-if="paper.penabled == 'no'"><label class="badge badge-danger">未开放</label></td>
-              <td v-if="paper.penabled == 'yes'"><label class="badge badge-success">答题中</label></td>
-              <td v-if="paper.penabled == 'no'"></td>
-              <td v-if="paper.penabled == 'yes' && paper.taken != true">
-                <button type="button" v-on:click="enter_test(paper.pid)" class="btn btn-gradient-success btn-sm"><i class="mdi mdi-arrow-right-drop-circle"></i> 进入答题</button>
-              </td>
-              <td v-if="paper.taken == true">您已参加过本考试</td>
+              <td>{{ paper.subtime }}</td>
+              <td v-if="paper.confirmed == 'no'"><label class="badge badge-danger">未登记</label></td>
+              <td v-if="paper.confirmed == 'yes'"><label class="badge badge-success">已登记</label></td>
+              <td class="font-weight-bold">{{ paper.grade }}</td>
             </tr>
           </tbody>
         </table>
