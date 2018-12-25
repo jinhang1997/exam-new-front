@@ -42,8 +42,10 @@ var vm = new Vue({
         alert('获取试题列表失败(2)');
       });
     },
-  },
+  }
   created:function(){
+    //this.get_my_info();
     this.get_test_list();
+    //this.get_test_history();
   }
 })

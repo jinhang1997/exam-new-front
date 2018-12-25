@@ -54,7 +54,7 @@ var vm = new Vue({
             {
               for (var j=0; j<judge_data.length; j++)
               {
-                console.log(judge_data[j]['id'] + "#" + templist[i]['id']);
+                //console.log(judge_data[j]['id'] + "#" + templist[i]['id']);
                 if (judge_data[j]['id'] == templist[i]['id'])
                 {
                   templist[i]['score'] = judge_data[j]['grade'];
