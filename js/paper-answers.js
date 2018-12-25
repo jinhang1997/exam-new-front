@@ -176,6 +176,57 @@ var vm = new Vue({
         console.log(res.status);
         alert('主观题判定结果清除失败(2)');
       });
+    },
+    start_zhuguan:function(){
+      postdata = {
+        action: 'nextid',
+        paperid: this.paperid,
+      };
+      this.$http.post(backend_server + 'judge-zhuguan/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          window.location.href = "judge-zhuguan.html?paperid=" + this.paperid 
+            + "&stuid=" + dataret.nextid;
+        }
+        else if (dataret.code == 201)
+        {
+          alert('所有学生均已有主观题分数');
+          window.location.href = "paper-answers.html?paperid=" + this.paperid;
+        }
+        else
+        {
+          alert('获取下个学生失败(1)');
+        }
+      },function(res){
+        console .log(res.status);
+        alert('获取下个学生失败(2)');
+      });
+    },
+    submit_grade:function(){
+      postdata = {
+        action: 'submit',
+        paperid: this.paperid,
+      };
+      this.$http.post(backend_server + 'judge-manage/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          alert('成绩提交成功');
+          location.reload();
+        }
+        else
+        {
+          alert('成绩提交失败(1)');
+        }
+      },function(res){
+        console .log(res.status);
+        alert('成绩提交失败(2)');
+      });
     }
   },
   created:function(){

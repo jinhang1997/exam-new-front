@@ -9,6 +9,7 @@ var vm = new Vue({
     anslist: '',
     answer_to_show: '',
     question_to_show: '',
+    confirmed: 'no'
   },
   methods:{
     showpro:function(content){
@@ -68,6 +69,7 @@ var vm = new Vue({
           }
           this.count = dataret.count;
           this.anslist = templist;
+          this.confirmed = dataret.confirmed;
         }
         else
         {
@@ -183,6 +185,9 @@ var vm = new Vue({
         alert('获取题目失败(2)');
       });
       console.log(this.paper)
+    },
+    back_to_list:function(){
+      window.location.href = "paper-answers.html?paperid=" + this.paperid;
     }
   },
   created:function(){

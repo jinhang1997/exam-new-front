@@ -21,6 +21,8 @@
 </div>
 <div class="float_back">
   <button class="btn btn-inverse-warning btn-sm" onclick="javascript:history.back(-1);"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回前页</button>
+  <br>
+  <button class="btn btn-inverse-dark btn-sm" onclick="javascript:window.location.href='paper-manage.html?mode=judge'"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回列表</button>
 </div>
 
 <div id="app">
@@ -94,7 +96,7 @@
                 <td>由判题系统自动对当前所有提交的答案中客观题部分进行判定</td>
               </tr>
               <tr>
-                <td><button class="btn btn-gradient-success btn-block"> 开始主观题判定</button></td>
+                <td><button class="btn btn-gradient-success btn-block" @click="start_zhuguan()"> 开始主观题判定</button></td>
                 <td>从提交列表中自动选择未判主观题的提交继续判题</td>
               </tr>
               <tr>
@@ -106,8 +108,8 @@
                 <td>清除当前所有主观题判定结果（<label class="badge bg-warning">该操作不可逆，请谨慎操作</label>）</td>
               </tr>
               <tr>
-                <td><button class="btn btn-gradient-info btn-block"> 提交最终成绩</button></td>
-                <td>以当前状态提交本次判题结果，并锁定试卷（<label class="badge bg-warning">锁定后，将不能继续判题</label>）</td>
+                <td><button class="btn btn-gradient-info btn-block" @click="submit_grade()"> 提交成绩</button></td>
+                <td>以当前状态提交列表中的学生成绩（<label class="badge bg-warning">提交后，该学生判题情况将不能修改</label>）</td>
               </tr>
             </tbody>
           </table> 
@@ -142,8 +144,8 @@
             <td>{{ ans.paperid }}</td>
             <td>{{ ans.stuid }}</td>
             <td>{{ ans.submit_time }}</td>
-            <td v-if="ans.confirmed == 'no'">未提交</td>
-            <td v-if="ans.confirmed == 'yes'">已提交</td>
+            <td v-if="ans.confirmed == 'no'"><label class="badge bg-warning">未提交</label></td>
+            <td v-if="ans.confirmed == 'yes'"><label class="badge bg-success">已提交</label></td>
             <td v-if="ans.keguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
             <td v-if="ans.keguan_grade != -1">{{ ans.keguan_grade }}</td>
             <td v-if="ans.zhuguan_grade == -1"><label class="badge bg-warning">未判题</label></td>
@@ -152,7 +154,8 @@
             </td>
             <td><button type="button" class="btn btn-gradient-info btn-sm" @click="showans(ans.stuid, ans.answers)"><i class="mdi mdi-information-outline"></i> 查看记录</button></td>
             <td><button type="button" class="btn btn-gradient-light btn-sm" @click="judge_zhuguan(ans.stuid, paper.pid)"><i class="mdi mdi-comment-check-outline"></i> 判主观题</button></td>
-            <td><button type="button" class="btn btn-gradient-danger btn-sm" @click="delans(ans.stuid)"><i class="mdi mdi-delete"></i> 删除记录</button></td>
+            <td v-if="ans.confirmed == 'no'"><button type="button" class="btn btn-gradient-danger btn-sm" @click="delans(ans.stuid)"><i class="mdi mdi-delete"></i> 删除记录</button></td>
+            <td v-if="ans.confirmed == 'yes'">不可删除已提交记录</td>
           </tr>
         </tbody>
       </table>

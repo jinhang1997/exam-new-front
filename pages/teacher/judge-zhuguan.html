@@ -16,14 +16,15 @@
 </head>
 
 <body class="content-wrapper">
-<div class="float_top">
-  <button class="btn btn-inverse-info btn-sm" onclick="javascript:smoothscroll();"><i class="mdi mdi-format-vertical-align-top"></i> 返回顶部</button>
-</div>
-<div class="float_back">
-  <button class="btn btn-inverse-warning btn-sm" onclick="javascript:history.back(-1);"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回前页</button>
-</div>
+  <div id="app">
+  <div class="float_top">
+    <button class="btn btn-inverse-info btn-sm" onclick="javascript:smoothscroll();"><i class="mdi mdi-format-vertical-align-top"></i> 返回顶部</button>
+  </div>
+  <div class="float_back">
+    <button class="btn btn-inverse-warning btn-sm" onclick="javascript:history.back(-1);"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回前页</button><br>
+    <button class="btn btn-inverse-dark btn-sm" @click="back_to_list()"><i class="mdi mdi-arrow-left-bold-circle-outline"></i> 返回列表</button>
+  </div>
 
-<div id="app">
   <div class="page-header">
   <h1>主观题判题</h1>
   </div>
@@ -82,7 +83,7 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">提交答案列表</h2>
-      <p class="card-description">请在下方对该学生主观题进行评分；需查看题干或答案请点击“查看题目”按钮</p>
+      <p class="card-description">请在下方对该学生主观题进行评分；若该记录已被评分，则显示的是最新一次提交的分数；需查看题干或答案请点击“查看题目”按钮</p>
       <table class="table">
         <thead>
           <th>(#)</th>
@@ -106,11 +107,12 @@
           </tr>
         </tbody>
       </table>
-      <p>    
+      <p v-if="confirmed == 'no'">    
         <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('only')"><i class="mdi mdi-file-check"></i> 保存当前主观题成绩</button>
         <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('back')"><i class="mdi mdi-keyboard-return"></i> 保存并返回提交列表</button>
         <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('next')"><i class="mdi mdi-subdirectory-arrow-right"></i> 保存并进入下个学生</button>
       </p>
+      <p v-if="confirmed == 'yes'">该学生成绩已提交，不允许修改！</p>
     </div>
   </div>
 </div>
