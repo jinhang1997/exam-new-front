@@ -44,9 +44,9 @@
               <td>{{ paper.pname }}</td>
               <td>{{ paper.teaname }}</td>
               <td>{{ paper.subtime }}</td>
-              <td v-if="paper.confirmed == 'no'"><label class="badge badge-danger">未登记</label></td>
+              <td v-if="paper.confirmed != 'yes'"><label class="badge badge-danger">未登记</label></td>
               <td v-if="paper.confirmed == 'yes'"><label class="badge badge-success">已登记</label></td>
-              <td class="font-weight-bold">{{ paper.grade }}</td>
+              <td class="font-weight-bold" v-if="paper.confirmed == 'yes'">{{ paper.grade }}</td>
             </tr>
           </tbody>
         </table>
