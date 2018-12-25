@@ -34,7 +34,16 @@
       <h2 class="card-title">查看题目</h2>
       <!-- <p class="card-description">请在下方文本框中一行输入一个学生学号</p> -->
       <p>
-
+        <table class="table table-bordered">
+          <thead>
+            <th>题目</th>
+            <th>参考答案</th>
+          </thead>
+          <tr>
+            <td>{{ question_to_show }}</td>
+            <td>{{ answer_to_show }}</td>
+          </tr>
+        </table>
       </p>
       <button type="button" class="btn btn-light btn-fw" onclick="javascript:hide_div()" /><i class="mdi mdi-window-close"></i> 关闭本窗口</button>
       <div></div>
@@ -61,10 +70,10 @@
           </tr>
           <tr>
             <td>是否开放</td>
-            <td v-if="paper.penabled == 'no'">否</td>
-            <td v-if="paper.penabled == 'yes'">是</td>
+            <td v-if="paper.penabled == 'no'"><label class="badge badge-danger">否</label></td>
+            <td v-if="paper.penabled == 'yes'"><label class="badge badge-success">是</label></td>
             <td>主观题数量</td><td>{{ count }}</td>
-            <td>当前学生</td><td>{{ stuid }}</td>
+            <td>当前学生</td><td class="font-weight-bold">{{ stuid }}</td>
         </tbody>
       </table>
     </div>
@@ -77,19 +86,19 @@
       <table class="table">
         <thead>
           <th>(#)</th>
-          <th>题目编号</th>
+          <!-- <th>题目编号</th> -->
           <th>查看题目</th>
           <th>学生答案</th>
           <th>本题分值</th>
-          <th>输入得分</th>
+          <th>本题得分</th>
           <th colspan="2">操作</th>
         </thead>
         <tbody>
           <tr v-for="(pro, index) in anslist">
-            <td>{{ index }}</td>
-            <td>{{ pro.id }}</td>
-            <td><button type="button" class="btn btn-gradient-info btn-sm" @click="show_pro(index)"><i class="mdi mdi-eye"></i></button></td>
-            <td>{{ pro.answer }}</td>
+            <td>{{ index + 1 }}</td>
+            <!-- <td>{{ pro.id }}</td> -->
+            <td><button type="button" class="btn btn-gradient-info btn-sm" @click="show_pro(pro.id)"><i class="mdi mdi-eye"></i></button></td>
+            <td class="font-weight-bold">{{ pro.answer }}</td>
             <td>{{ pro.point }}</td>
             <td><input type="number" v-bind:max="pro.point" min="0" class="form-control" v-model="pro.score" v-bind:value="pro.score" /></td>
             <td><button type="button" class="btn btn-gradient-danger btn-sm" @click="this_zero(index)"> 本题零分</button></td>
@@ -97,7 +106,11 @@
           </tr>
         </tbody>
       </table>
-      <button type="button" class="btn btn-gradient-success btn-block" @click="submit"><i class="mdi mdi-file-check"></i> 提交本学生主观题成绩</button>
+      <p>    
+        <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('only')"><i class="mdi mdi-file-check"></i> 保存当前主观题成绩</button>
+        <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('back')"><i class="mdi mdi-keyboard-return"></i> 保存并返回提交列表</button>
+        <button type="button" class="btn btn-gradient-success btn-fw" @click="submit('next')"><i class="mdi mdi-subdirectory-arrow-right"></i> 保存并进入下个学生</button>
+      </p>
     </div>
   </div>
 </div>

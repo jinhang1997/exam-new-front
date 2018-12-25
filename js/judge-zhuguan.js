@@ -7,9 +7,8 @@ var vm = new Vue({
     paper: '',
     count: 0,
     anslist: '',
-    answer_content: '',
-    stuid_to_show: '',
     answer_to_show: '',
+    question_to_show: '',
   },
   methods:{
     showpro:function(content){
@@ -46,9 +45,26 @@ var vm = new Vue({
         if (dataret.code == 200)
         {
           templist = dataret.list;
+          judge_data = dataret.judge;    
+          // for each answer   
           for (var i=0; i<templist.length; i++)
           {
-            templist[i]['score'] = 0;
+            if (dataret.has_judge == 1)
+            {
+              for (var j=0; j<judge_data.length; j++)
+              {
+                console.log(judge_data[j]['id'] + "#" + templist[i]['id']);
+                if (judge_data[j]['id'] == templist[i]['id'])
+                {
+                  templist[i]['score'] = judge_data[j]['grade'];
+                  break;
+                }
+              }
+            }
+            else
+            {
+              templist[i]['score'] = 0;
+            }
           }
           this.count = dataret.count;
           this.anslist = templist;
@@ -62,7 +78,7 @@ var vm = new Vue({
         alert('获取主观题答案列表失败(2)');
       });
     },
-    submit:function(){
+    submit:function(action){
       detail = [];
       grade = 0;
       for (var i=0; i<this.anslist.length; i++)
@@ -80,8 +96,8 @@ var vm = new Vue({
         action: 'submit',
         paperid: this.paperid,
         stuid: this.stuid,
-        zhuguan_detail: detail,
-        zhuguan_score: grade
+        detail: detail,
+        score: grade
       };
       this.$http.post(backend_server + 'judge-zhuguan/', postdata, {credentials: true})
       .then(function(res){
@@ -90,6 +106,14 @@ var vm = new Vue({
         if (dataret.code == 200)
         {
           alert('保存主观题评分成功');
+          if (action == 'back')
+          {
+            window.history.back(-1);
+          }
+          else if (action == 'next')
+          {
+            this.get_nextid();
+          }
         }
         else
         {
@@ -100,14 +124,65 @@ var vm = new Vue({
         alert('保存主观题评分失败(2)');
       });
     },
+    get_nextid:function(){
+      postdata = {
+        action: 'nextid',
+        paperid: this.paperid,
+      };
+      this.$http.post(backend_server + 'judge-zhuguan/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          window.location.href = "judge-zhuguan.html?paperid=" + this.paperid 
+            + "&stuid=" + dataret.nextid;
+        }
+        else if (dataret.code == 201)
+        {
+          alert('所有学生均已有主观题分数');
+          window.location.href = "paper-answers.html?paperid=" + this.paperid;
+        }
+        else
+        {
+          alert('获取下个学生失败(1)');
+        }
+      },function(res){
+        console.log(res.status);
+        alert('获取下个学生失败(2)');
+      });
+    },
     this_zero:function(index){
       this.anslist[index]['score'] = 0;
     },
     this_full:function(index){
       this.anslist[index]['score'] = this.anslist[index]['point'];
     },
-    show_pro:function(index){
-      show_div();
+    show_pro:function(id){
+      postdata = {
+        action: 'getpro',
+        paperid: this.paperid,
+        proid: parseInt(id)
+      };
+      this.$http.post(backend_server + 'judge-zhuguan/', postdata, {credentials: true})
+      .then(function(res){
+        console.log(res.bodyText);
+        var dataret = JSON.parse(res.bodyText);
+        if (dataret.code == 200)
+        {
+          this.question_to_show = dataret.problem;
+          this.answer_to_show = dataret.right;
+          show_div();
+        }
+        else
+        {
+          alert('获取题目失败(1)');
+        }
+      },function(res){
+        console.log(res.status);
+        alert('获取题目失败(2)');
+      });
+      console.log(this.paper)
     }
   },
   created:function(){
