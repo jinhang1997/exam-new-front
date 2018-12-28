@@ -29,12 +29,13 @@
    <div id="overdiv" class="card">
     <div class="card-body">
       <h2 class="card-title">批量导入试题</h2>
-      <p class="card-description">请下载 Excel 模板填写后上传</p>
+      <p class="card-description">请下载 Excel 模板填写后上传：<a href="../../files/upload-template.xls">下载模板</a></p>
       <form>
-        <!--<textarea rows="10" cols="50" id="batch_names" class="form-control" v-model="batch_names" placeholder="一行一个学生..."></textarea><br>
-        <button type="button" class="btn btn-success btn-fw" @click="batch_insert" /><i class="mdi mdi-account-multiple-plus"></i> 批量添加</button>
-        <button type="reset" class="btn btn-warning btn-fw" /><i class="mdi mdi-delete-variant"></i> 清空输入框</button>-->
-        <button type="button" class="btn btn-light btn-fw" onclick="javascript:hide_div()" /><i class="mdi mdi-window-close"></i> 取消</button> 
+        <p><input type="file" id="upload_prolist" class="form-control"></p>
+        <p>
+          <button type="button" class="btn btn-gradient-primary btn-fw" @click="upload_paper()" /><i class="mdi mdi-cloud-upload"></i> 上传</button>
+          <button type="button" class="btn btn-light btn-fw" onclick="javascript:hide_div()" /><i class="mdi mdi-window-close"></i> 取消</button>
+        </p>
       </form>
       <div></div>
     </div>
