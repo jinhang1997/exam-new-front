@@ -132,6 +132,7 @@ var vm = new Vue({
       var form_data = new FormData();
       var file_info = $( '#upload_prolist')[0].files[0];
       form_data.append('file', file_info);
+      form_data.append('paperid', this.paper.pid);
       if(file_info == undefined){
         alert('你没有选择任何文件');
         return;
