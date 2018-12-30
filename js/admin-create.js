@@ -65,6 +65,29 @@ var vm = new Vue({
         alert('添加用户失败(unknown error)');
       });
     },
+    upload_userlist:function(){
+      console.log(123)
+      var form_data = new FormData();
+      var file_info = $( '#upload_userlist')[0].files[0];
+      form_data.append('file', file_info);
+      //form_data.append('paperid', this.paper.pid);
+      if(file_info == undefined){
+        alert('你没有选择任何文件');
+        return;
+      }
+      $.ajax({
+        url: backend_server + 'user-upload/',
+        type:'POST',
+        data: form_data,
+        processData: false,  // tell jquery not to process the data
+        contentType: false, // tell jquery not to set contentType
+        success: function(callback) {
+          alert('上传成功！');
+          //location.reload();
+          window.location.href = 'admin-userlist.html'
+        }
+      });
+    }
   },
   created:function(){
   }

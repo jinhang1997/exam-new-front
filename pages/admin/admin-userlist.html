@@ -44,7 +44,7 @@
         <td v-if="user.usertype == 'teacher'"><label class="badge badge-success">教师用户</label></td>
         <td v-if="user.usertype == 'admin'"><label class="badge badge-warning">管理员</label></td>
         <!-- <td>{{ user.usertype }}</td> -->
-        <td><button type="button" class="btn btn-gradient-danger btn-sm" v-on:click="remove(user.username)" /><i class="mdi mdi-account-minus"></i> 删除</button></td>
+        <td><button type="button" class="btn btn-gradient-danger btn-sm" v-if="user.usertype != 'admin'" v-on:click="remove(user.username)" /><i class="mdi mdi-account-minus"></i> 删除</button></td>
       </tr>
       <tr>
         <td><input type="text" id="name" v-model="postdata.username" class="form-control" placeholder="待添加账户的账号..." /></td>
