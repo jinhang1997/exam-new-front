@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "增加一个用户的命令是什么",
+            "type": "keguan",
+            "point": 4,
+            "right": "useradd",
+            "wrong1": "usermod",
+            "wrong2": "groupadd",
+            "wrong3": "userdel"
+        },
+        {
+            "id": 2,
+            "problem": "权限为765的文件，下列哪个是正确的权限位标记（）?",
+            "type": "keguan",
+            "point": 4,
+            "right": "-rwxrw-r-x",
+            "wrong1": "-rw-r-xr-r",
+            "wrong2": "-rw-rw-r-x",
+            "wrong3": "-rwxr-xrwx"
+        },
+        {
+            "id": 3,
+            "problem": "在unix系统下执行chmod(&ldquo;/usr/test/sample&rdquo;,0753)之后该文件sample的访问权限为",
+            "type": "keguan",
+            "point": 4,
+            "right": "拥有者可读写执行，同组用户可读可执行，其他用户可写可执行",
+            "wrong1": "拥有者可读写执行，同组用户可读写，其他用户可读可执行",
+            "wrong2": "拥有者可读写执行，同组用户可写可执行，其他用户可读可执行",
+            "wrong3": "拥有者可读写执行，同组用户可读可执行，其他用户可读写"
+        },
+        {
+            "id": 4,
+            "problem": "下面选项关于linux下查看cpu,内存,swap,硬盘信息的命令描述错误的是？",
+            "type": "keguan",
+            "point": 4,
+            "right": "du -h: 查看硬盘信息",
+            "wrong1": "cat  /proc/meminfo 查看linux系统内存信息的linux系统命令",
+            "wrong2": "cat  /proc/cpuinfo 查看CPU相关参数的linux系统命令",
+            "wrong3": "cat /proc/swaps ：查看所有swap分区的信息"
+        },
+        {
+            "id": 5,
+            "problem": "写出完成以下功能的Linux命令:使用sed命令, 将文件xyz中的单词AAA全部替换为BBB。",
+            "type": "keguan",
+            "point": 4,
+            "right": "sed 's/AAA/BBB/g' xyz",
+            "wrong1": "sed 's/AAA/BBB' xyz",
+            "wrong2": "sed 's/AAA/BBB/p' xyz",
+            "wrong3": "sed 's/AAA/BBB/d' xyz"
+        },
+        {
+            "id": 6,
+            "problem": "Linux系统中某个可执行文件属于root并且有setuid，当一个普通用户mike运行这个程序时，产生的进程的有效用户和实际用户分别是什么？",
+            "type": "keguan",
+            "point": 4,
+            "right": "root mike",
+            "wrong1": "root rooy",
+            "wrong2": "mike root",
+            "wrong3": "mike mike"
+        },
+        {
+            "id": 7,
+            "problem": "linux下查看磁盘挂载状态的命令式？",
+            "type": "keguan",
+            "point": 4,
+            "right": "mount",
+            "wrong1": "rpm",
+            "wrong2": "netstat",
+            "wrong3": "df"
+        },
+        {
+            "id": 8,
+            "problem": "下列关于文件系统中元数据（比如ext2中的inode）的基本作用及ext2和ext3的根本区别描述错误的有？",
+            "type": "keguan",
+            "point": 4,
+            "right": "EXT2 inode包含文件访问权限、属主、组、大小、生成时间、访问时间、最后修改时间等信息。它是linux管理文件系统的最基本单位，也是文件系统连接任何子目录、文件的桥梁。",
+            "wrong1": "EXT2 inode用来定义文件系统的结构以及描述系统中每个文件的管理信息，每个文件都有且只有一个inode，即使文件中没有数据，其索引结点也是存在的",
+            "wrong2": "ext2文件系统是非日志文件系统，而ext3有多种日志模式",
+            "wrong3": "ext3文件系统能够极大地提高文件系统的完整性"
+        },
+        {
+            "id": 9,
+            "problem": "在linux系统中,有一个文件夹里面有若干文件,通常用哪个命令可以获取这个文件夹的大小:",
+            "type": "keguan",
+            "point": 4,
+            "right": "du -sh",
+            "wrong1": "ls -h",
+            "wrong2": "df -h",
+            "wrong3": "fdish -h"
+        },
+        {
+            "id": 10,
+            "problem": "你们公司有三个",
+            "type": "keguan",
+            "point": 4,
+            "right": "除了Mon1，所有的计算机都安装SNMP",
+            "wrong1": "在Mon1上安装SNMP",
+            "wrong2": "在Mon1上的TCP/IP安装属性中配置SNMP服务选项",
+            "wrong3": "在除了Mon1的所有计算机上的TCP/IP安装属性中配置SNMP服务选项"
+        }
+    ]
+}

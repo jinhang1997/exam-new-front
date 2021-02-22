@@ -1,0 +1,105 @@
+{
+    "problem_count": 10,
+    "question_list": [
+        {
+            "id": 1,
+            "problem": "采用深度优先搜索或拓扑排序算法可以判断出一个有向图中是否有环(回路)()",
+            "type": "keguan",
+            "point": 4,
+            "right": "对",
+            "wrong1": "错",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 2,
+            "problem": "将线性表中的结点信息组织成平衡的二叉树,其优点之一是总能保证任意检索长度均为log&lt;sub&gt;2&lt;/sub&gt;n量级(n为线性表中的结点数目)()",
+            "type": "keguan",
+            "point": 4,
+            "right": "对",
+            "wrong1": "错",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 3,
+            "problem": "设一个顺序有序表A[1:14]中有14个元素，则采用二分法查找元素A[4]的过程中比较元素的顺序为(  )。",
+            "type": "keguan",
+            "point": 4,
+            "right": "A[7]，A[3]，A[5]，A[4]",
+            "wrong1": "A[1]，A[14]，A[7]，A[4]",
+            "wrong2": "A[1]，A[2]，A[3]，A[4]",
+            "wrong3": "A[7]，A[5] ，A[3]，A[4]"
+        },
+        {
+            "id": 4,
+            "problem": "<span>对线性表进行折半查找时，要求线性表必须以链式方式存储，且结点按关键字有序排列，这样的说法正确吗？</span>",
+            "type": "keguan",
+            "point": 4,
+            "right": "不正确",
+            "wrong1": "正确",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 5,
+            "problem": "如果要求一个线性表既能较快的查找，又能适应动态变化的要求，则可采用&nbsp;（）查找法。",
+            "type": "keguan",
+            "point": 4,
+            "right": "分块查找",
+            "wrong1": "顺序查找",
+            "wrong2": "折半查找",
+            "wrong3": "基于属性"
+        },
+        {
+            "id": 6,
+            "problem": "在顺序表（3,6,8,10,12,15,16,18,21,25,30）中，用二分法查找关键码值11，所需的关键码比较次数为",
+            "type": "keguan",
+            "point": 4,
+            "right": "4",
+            "wrong1": "3",
+            "wrong2": "2",
+            "wrong3": "5"
+        },
+        {
+            "id": 7,
+            "problem": "折半查找的时间复杂性为()",
+            "type": "keguan",
+            "point": 4,
+            "right": "O(logn)",
+            "wrong1": "O(n)",
+            "wrong2": "O(nlogn)",
+            "wrong3": "O(n<sup>2</sup>)"
+        },
+        {
+            "id": 8,
+            "problem": "在用Floyd算法求解各顶点间的最短路径时,每个表示两点间路径的path&lt;sup&gt;(k-1)&lt;/sup&gt;[I,J]一定是path&lt;sup&gt;(k)&lt;/sup&gt;[I,J]的子集(k=1,2,3,&hellip;,n)()",
+            "type": "keguan",
+            "point": 4,
+            "right": "错",
+            "wrong1": "对",
+            "wrong2": "none",
+            "wrong3": "none"
+        },
+        {
+            "id": 9,
+            "problem": "设顺序线性表的长度为30，分成5块，每块6个元素，如果采用分块查找，则其平均查找长度为（ ）。",
+            "type": "keguan",
+            "point": 4,
+            "right": "6.5",
+            "wrong1": "11",
+            "wrong2": "5",
+            "wrong3": "6"
+        },
+        {
+            "id": 10,
+            "problem": "二分查找树里查询一个关键字的最坏时间复杂度是______",
+            "type": "keguan",
+            "point": 4,
+            "right": "O(n)",
+            "wrong1": "O(n log n)",
+            "wrong2": "O(n^2)",
+            "wrong3": "O(n^3)"
+        }
+    ]
+}
